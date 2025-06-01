@@ -6,37 +6,51 @@
   <title>Abel George - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
 </head>
 <body>
   <header>
-  <h1>Abel George</h1>
-  <p>Problem Solver | Builder | Computer Science @ UB</p>
-</header>
+    <h1>Abel George</h1>
+    <p>Problem Solver | Builder | Computer Science @ UB</p>
+  </header>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I've always been drawn to solving problems—whether it's debugging code, designing hardware, or helping people figure out their next step. That curiosity led me to study Computer Science at the University at Buffalo, where I’ve built everything from AI-powered apps to Arduino-based systems.
-  </p>
-  <p>
-    Outside the classroom, I’ve led Agile teams of 5 to 17 people, mentored new students as a Peer Coordinator, and worked on projects that merge software, design, and real-world impact—from music-based recommendation engines to autonomous robots that clean up their environment.
-  </p>
-  <p>
-    Whether it’s building scalable web apps or collaborating on CAD-based hardware, I care about thoughtful design, accessibility, and making things that genuinely help people.
-  </p>
-</section>
-
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I've always been drawn to solving problems—whether it's debugging code, designing hardware, or helping people figure out their next step. That curiosity led me to study Computer Science at the University at Buffalo, where I’ve built everything from AI-powered apps to Arduino-based systems.
+    </p>
+    <p>
+      Outside the classroom, I’ve led Agile teams of 5 to 17 people, mentored new students as a Peer Coordinator, and worked on projects that merge software, design, and real-world impact—from music-based recommendation engines to autonomous robots that clean up their environment.
+    </p>
+    <p>
+      Whether it’s building scalable web apps or collaborating on CAD-based hardware, I care about thoughtful design, accessibility, and making things that genuinely help people.
+    </p>
+  </section>
 
   <section id="projects">
     <h2>Projects</h2>
 
-    <ul>
-      <li>
-        <strong>Social Sync App</strong> — Python & React project for music sharing
-        <br /><a href="https://github.com/yourusername/social-sync">GitHub Repo</a>
-      </li>
-    </ul>
+    <div class="project">
+      <h3>Social Sync App – Personality-Based Event Matching</h3>
+      <p>
+        Originally developed as a class project, Social Sync began as a personality-based roommate matcher using Big Five trait data from Kaggle. Over time, it evolved into a broader platform to connect people through event recommendations based on psychological clustering.
+      </p>
+
+      <h4>Key Deliverables</h4>
+      <ul>
+        <li>🧠 Conducted clustering analysis on over 10,000 responses to Big Five surveys using KMeans and the Elbow Method</li>
+        <li>📊 Identified distinct personality clusters and designed user personas for matching algorithms</li>
+        <li>🧩 Developed a React front-end and Python backend to serve personalized event recommendations</li>
+        <li>📈 Visualized trait distributions and cluster metrics to guide product evolution</li>
+      </ul>
+
+      <h4>Gallery</h4>
+      <img src="assets/socialsync1.png" alt="Bar chart of personality clusters" class="project-img" />
+      <img src="assets/socialsync2.png" alt="Elbow graph to determine optimal clusters" class="project-img" />
+
+      <p>
+        <a href="https://github.com/yourusername/social-sync" target="_blank">View GitHub Repository</a>
+      </p>
+    </div>
 
     <div class="project">
       <h3>Autonomous Trash Collecting Robot</h3>
@@ -55,8 +69,7 @@
       <h4>Gallery</h4>
       <img src="assets/trashbot-cad-drawing.png" alt="CAD drawing of trash robot" class="project-img" />
       <img src="assets/trashbot-render.png" alt="3D render of trash robot" class="project-img" />
-      <img src="assets/trashbot-irl.png" alt="final design" class="project-img" />
-
+      <img src="assets/trashbot-irl.png" alt="Final physical prototype" class="project-img" />
 
       <p>
         <a href="https://github.com/yourusername/trash-bot" target="_blank">View GitHub Repository</a>
@@ -64,17 +77,14 @@
     </div>
   </section>
 
-
   <section id="contact">
-  <h2>Contact</h2>
-  <div class="contact-list">
-    <p><i class="fas fa-envelope"></i> abelgeorge323@gmail.com</p>
-    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/abel-george323" target="_blank">linkedin.com/in/abel-george323</a></p>
-
-    <p><i class="fas fa-phone"></i> (917)-676-0901</p>
-  </div>
-</section>
-
+    <h2>Contact</h2>
+    <div class="contact-list">
+      <p><i class="fas fa-envelope"></i> abelgeorge323@gmail.com</p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/abel-george323" target="_blank">linkedin.com/in/abel-george323</a></p>
+      <p><i class="fas fa-phone"></i> (917)-676-0901</p>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Abel George</p>
