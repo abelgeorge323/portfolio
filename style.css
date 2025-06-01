@@ -35,3 +35,17 @@ footer {
   background: #222;
   color: #fff;
 }
+.project {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
