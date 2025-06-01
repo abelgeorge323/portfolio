@@ -49,3 +49,17 @@ footer {
   border: 1px solid #ccc;
   border-radius: 8px;
 }
+#contact {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.contact-list {
+  font-size: 1.1em;
+  line-height: 2em;
+}
+
+.contact-list i {
+  margin-right: 10px;
+  color: #007acc;
+}
