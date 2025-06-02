@@ -63,3 +63,12 @@ footer {
   margin-right: 10px;
   color: #007acc;
 }
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px auto 20px;
+  display: block;
+  border: 2px solid #ccc;
+}
