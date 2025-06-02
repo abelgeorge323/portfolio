@@ -3,90 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abel George – Just for Fun</title>
+  <title>Fun Stuff – Abel George</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .gallery {
+    .fun-container {
       max-width: 900px;
       margin: auto;
       padding: 20px;
     }
-    .gallery h2 {
+
+    .fun-bio {
       text-align: center;
+      margin-bottom: 40px;
     }
-    .media-block {
-      margin: 20px 0;
-      text-align: center;
+
+    .video-card {
+      margin-bottom: 40px;
     }
-    .media-block img, .media-block video {
-      max-width: 100%;
-      border-radius: 8px;
+
+    video {
+      width: 100%;
+      border-radius: 12px;
       border: 1px solid #ccc;
     }
+
     .caption {
+      text-align: center;
       font-style: italic;
       margin-top: 8px;
     }
-    .back-link {
+
+    a.back-link {
       display: block;
       text-align: center;
-      margin-top: 30px;
-    }
-    .back-link a {
-      color: #007acc;
+      margin-top: 40px;
       text-decoration: none;
-      font-weight: bold;
-    }
-    .back-link a:hover {
-      text-decoration: underline;
+      color: #007acc;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>More About Me</h1>
-    <p>Life beyond the laptop 🏞️ 🏀 🎥</p>
-  </header>
-
-  <section class="gallery">
-    <h2>Some of My Favorite Things Outside the Classroom</h2>
-    <p style="text-align: center;">
-      When I'm not building robots or coding up a storm, I love staying active, exploring the outdoors, and capturing moments that make me smile. Here’s a little peek into that side of my life.
-    </p>
-
-    <div class="media-block">
-      <img src="https://via.placeholder.com/600x400.png?text=Hiking+Photo" alt="Placeholder hiking photo" />
-      <div class="caption">Hiking the High Peaks – nothing like clearing your head at 4,000 feet.</div>
+  <div class="fun-container">
+    <div class="fun-bio">
+      <h2>Life Outside the Classroom</h2>
+      <p>These are a few moments that reflect what I enjoy beyond academics—adventure, creativity, and connection.</p>
     </div>
 
-    <div class="media-block">
+    <div class="video-card">
       <video controls>
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        <source src="assets/badspike.mp4" type="video/quicktime">
         Your browser does not support the video tag.
       </video>
-      <div class="caption">Testing a robot prototype – yes, it broke 10 seconds later 😂</div>
+      <div class="caption">🏐 Trying (and failing) a volleyball spike</div>
     </div>
 
-    <div class="media-block">
-      <img src="https://via.placeholder.com/600x400.png?text=Basketball+Photo" alt="Placeholder basketball photo" />
-      <div class="caption">Weekly pickup games – where I practice my soft skills and jump shots.</div>
-    </div>
-
-    <div class="media-block">
+    <div class="video-card">
       <video controls>
-        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+        <source src="assets/thetatau.mp4" type="video/quicktime">
         Your browser does not support the video tag.
       </video>
-      <div class="caption">Editing a video – telling stories through film.</div>
+      <div class="caption">🤝 Theta Tau memories — brotherhood, projects, and laughs</div>
     </div>
 
-    <div class="back-link">
-      <a href="index.html">&larr; Back to Portfolio</a>
+    <div class="video-card">
+      <video controls>
+        <source src="assets/chewy.mp4" type="video/quicktime">
+        Your browser does not support the video tag.
+      </video>
+      <div class="caption">🐶 Meet Chewy, the most dramatic dog I know</div>
     </div>
-  </section>
 
-  <footer>
-    <p>&copy; 2025 Abel George</p>
-  </footer>
+    <div class="video-card">
+      <video controls>
+        <source src="assets/mountain.mp4" type="video/quicktime">
+        Your browser does not support the video tag.
+      </video>
+      <div class="caption">⛰️ Mountain views from Belize — peaceful & humbling</div>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="assets/waterfall.mp4" type="video/quicktime">
+        Your browser does not support the video tag.
+      </video>
+      <div class="caption">💦 Exploring a hidden waterfall in Belize</div>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="assets/baking.mp4" type="video/quicktime">
+        Your browser does not support the video tag.
+      </video>
+      <div class="caption">🧁 Weekend baking therapy — results may vary</div>
+    </div>
+
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+  </div>
 </body>
 </html>
