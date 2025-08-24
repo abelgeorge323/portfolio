@@ -157,3 +157,64 @@ nav {
   0%, 100% { transform: translateY(0) rotate(var(--angle, 0deg)); }
   50%      { transform: translateY(-8px) rotate(var(--angle, 0deg)); }
 }
+
+/* --- CTA: arrows + box --- */
+.cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+  min-height: 90px; /* ensures space for arrows */
+}
+
+/* make sure the link renders as a solid box and overrides .nav-link */
+a.nav-link.cta-box {
+  display: inline-block;
+  background: #fff;
+  color: #e11d48 !important;        /* override .nav-link (white) */
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 3px solid #e11d48;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  animation: pulseBox 2s infinite;
+}
+
+@keyframes pulseBox {
+  0%, 100% { transform: scale(1); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+  50%      { transform: scale(1.05); box-shadow: 0 6px 14px rgba(225,29,72,0.5); }
+}
+
+/* Big diagonal cartoony arrows */
+.arrow {
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  animation: bounce 1.5s infinite;
+}
+
+.arrow.left {
+  border-right: 60px solid #e11d48;
+  transform: rotate(-25deg);
+}
+
+.arrow.right {
+  border-left: 60px solid #e11d48;
+  transform: rotate(25deg);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+/* optional: shrink on small screens */
+@media (max-width: 520px) {
+  .arrow { border-top: 28px solid transparent; border-bottom: 28px solid transparent; }
+  .arrow.left  { border-right: 44px solid #e11d48; }
+  .arrow.right { border-left: 44px solid #e11d48; }
+  a.nav-link.cta-box { padding: 10px 16px; }
+}
