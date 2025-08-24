@@ -188,7 +188,9 @@ a.nav-link.cta-box {
 }
 
 /* Big diagonal cartoony arrows */
+/* Big diagonal cartoony arrows (rotation + bounce together) */
 .arrow {
+  --angle: 0deg;                 /* default; overridden per side */
   width: 0;
   height: 0;
   border-top: 40px solid transparent;
@@ -197,18 +199,18 @@ a.nav-link.cta-box {
 }
 
 .arrow.left {
+  --angle: 25deg;                /* flipped upward left */
   border-right: 60px solid #e11d48;
-  transform: rotate(25deg);
 }
 
 .arrow.right {
+  --angle: -25deg;               /* flipped upward right */
   border-left: 60px solid #e11d48;
-  transform: rotate(-25deg);
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-8px); }
+  0%, 100% { transform: rotate(var(--angle)) translateY(0); }
+  50%      { transform: rotate(var(--angle)) translateY(-8px); }
 }
 
 /* optional: shrink on small screens */
