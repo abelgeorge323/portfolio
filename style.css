@@ -198,12 +198,12 @@ a.nav-link.cta-box {
 
 .arrow.left {
   border-right: 60px solid #e11d48;
-  transform: rotate(-25deg);
+  transform: rotate(25deg);
 }
 
 .arrow.right {
   border-left: 60px solid #e11d48;
-  transform: rotate(25deg);
+  transform: rotate(-25deg);
 }
 
 @keyframes bounce {
