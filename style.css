@@ -106,3 +106,85 @@ nav {
 .nav-link:hover {
   text-decoration: underline;
 }
+
+/* --- Cartoony red arrows for CTA --- */
+.cta-link {
+  position: relative;
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: transparent;
+  text-decoration: none;
+}
+
+/* red glow/pulse on the text itself */
+@keyframes pulse {
+  0%,100% { text-shadow: 0 0 0 rgba(225,29,72,0); }
+  50%     { text-shadow: 0 0 12px rgba(225,29,72,0.6); }
+}
+.cta-link { animation: pulse 2s ease-in-out infinite; }
+
+/* little wiggle for the arrows */
+@keyframes wiggle {
+  0%,100% { transform: rotate(-18deg) translateY(0); }
+  50%     { transform: rotate(-10deg) translateY(-2px); }
+}
+@keyframes wiggleR {
+  0%,100% { transform: rotate(18deg) translateY(0); }
+  50%     { transform: rotate(10deg) translateY(-2px); }
+}
+
+/* LEFT arrow */
+.cta-link::before,
+.cta-link::after {
+  content: "";
+  position: absolute;
+  top: -16px;               /* raise arrows above the text a bit */
+  width: 0; height: 0;
+  filter: drop-shadow(0 2px 0 rgba(0,0,0,0.25));
+}
+
+/* triangle body + tail = cartoony arrow built from borders */
+.cta-link::before {
+  left: -36px;
+  border: 12px solid transparent;
+  border-right-color: #e11d48;       /* red (tail) */
+  animation: wiggle 1.3s ease-in-out infinite;
+}
+.cta-link::after {
+  right: -36px;
+  border: 12px solid transparent;
+  border-left-color: #e11d48;        /* red (tail) */
+  animation: wiggleR 1.3s ease-in-out infinite;
+}
+
+/* add arrowheads */
+.cta-link span { position: relative; }
+.cta-link span::before,
+.cta-link span::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 0; height: 0;
+  filter: drop-shadow(0 2px 0 rgba(0,0,0,0.25));
+}
+.cta-link span::before {
+  left: -50px;
+  border: 10px solid transparent;
+  border-left-color: #e11d48;        /* left arrowhead */
+  transform: rotate(-12deg);
+}
+.cta-link span::after {
+  right: -50px;
+  border: 10px solid transparent;
+  border-right-color: #e11d48;       /* right arrowhead */
+  transform: rotate(12deg);
+}
+
+/* make sure the CTA sits nicely on mobile */
+@media (max-width: 480px) {
+  .cta-link::before { left: -28px; }
+  .cta-link::after  { right: -28px; }
+  .cta-link span::before { left: -40px; }
+  .cta-link span::after  { right: -40px; }
+}
